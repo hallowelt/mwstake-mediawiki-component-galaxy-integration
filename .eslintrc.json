@@ -1,0 +1,18 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/server",
+		"wikimedia/jquery"
+	],
+	"globals": {
+		"mw": "readonly",
+		"mws": "writeable",
+		"WebSocket": "readonly",
+		"window": "readonly"
+	},
+	"rules": {
+		"es-x/no-async-functions": "off",
+		"max-len": "off",
+		"no-implicit-globals": "off"
+	}
+}
