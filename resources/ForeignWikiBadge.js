@@ -47,3 +47,10 @@ mws.galaxyIntegration.ForeignWikiBadge.prototype.shouldUseLightText = function (
 	}
 	return this.sourceWiki.color.lightText || false
 };
+
+mws.galaxyIntegration.getSourceColor = function ( source ) {
+	if ( !source || !source.color ) {
+		return null;
+	}
+	return source.color.background || null;
+};
