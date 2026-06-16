@@ -11,7 +11,7 @@ mws.galaxyIntegration.ForeignWikiBadge.prototype.getWikiBadge = function ( maxLe
 	}
 	let text = this.sourceWiki.display_text;
 	if ( maxLength > 0 ) {
-		text = text.length > maxLength ? text.substring( 0, maxLength - 1 ) + '…' : text;
+		text = text.length > maxLength ? text.substring( 0, maxLength - 1 ) + '…' : text; // eslint-disable-line unicorn/prefer-string-slice
 	}
 	const $badge = $( '<div>' ).addClass( 'foreign-wiki-badge' );
 	const $icon = $( '<span>' ).addClass( 'foreign-wiki-badge__icon' );
@@ -26,10 +26,10 @@ mws.galaxyIntegration.ForeignWikiBadge.prototype.getWikiBadge = function ( maxLe
 		$badge.addClass( 'foreign-wiki-badge--light-text' );
 	}
 	return $badge;
-}
+};
 
 mws.galaxyIntegration.ForeignWikiBadge.prototype.getWikiColor = function () {
-	if ( !this.sourceWiki )  {
+	if ( !this.sourceWiki ) {
 		return null;
 	}
 	if ( !this.sourceWiki.color ) {
@@ -39,11 +39,11 @@ mws.galaxyIntegration.ForeignWikiBadge.prototype.getWikiColor = function () {
 };
 
 mws.galaxyIntegration.ForeignWikiBadge.prototype.shouldUseLightText = function () {
-	if ( !this.sourceWiki )  {
+	if ( !this.sourceWiki ) {
 		return false;
 	}
 	if ( !this.sourceWiki.color ) {
 		return false;
 	}
-	return this.sourceWiki.color.lightText || false
+	return this.sourceWiki.color.lightText || false;
 };
