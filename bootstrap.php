@@ -8,7 +8,6 @@ define( 'MWSTAKE_MEDIAWIKI_COMPONENT_GALAXYINTEGRATION_VERSION', '1.0.1' );
 
 MWStake\MediaWiki\ComponentLoader\Bootstrapper::getInstance()
 ->register( 'galaxy-integration', static function () {
-
 	$GLOBALS['wgResourceModules']['mwstake.component.galaxy.bootstrap'] = [
 		'scripts' => [
 			'resources/bootstrap.js',
