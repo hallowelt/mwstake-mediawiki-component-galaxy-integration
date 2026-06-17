@@ -12,6 +12,9 @@ MWStake\MediaWiki\ComponentLoader\Bootstrapper::getInstance()
 		'scripts' => [
 			'resources/bootstrap.js',
 		],
+		'styles' => [
+			'resources/galaxy.css',
+		],
 		'localBasePath' => __DIR__
 	];
 
