@@ -4,7 +4,7 @@ mws.galaxyIntegration = {
 };
 
 mw.hook( 'oojsplus.ui.widget.batchoptionwidget.preinit' ).add( ( item, $element ) => {
-	if ( !item.data.includes( 'source' ) ) {
+	if ( !item.data.includes( 'source' ) ) { // eslint-disable-line es-x/no-array-prototype-includes
 		return;
 	}
 	if ( item.attr.length === 0 ) {
