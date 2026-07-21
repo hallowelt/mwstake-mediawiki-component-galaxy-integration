@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function ( grunt ) {
-	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 
@@ -22,12 +21,9 @@ module.exports = function ( grunt ) {
 				'!node_modules/**',
 				'!vendor/**'
 			]
-		},
-		banana: {
-			all: 'i18n/'
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'eslint', 'stylelint' /* 'banana' */ ] );
+	grunt.registerTask( 'test', [ 'eslint', 'stylelint' ] );
 	grunt.registerTask( 'default', 'test' );
 };
